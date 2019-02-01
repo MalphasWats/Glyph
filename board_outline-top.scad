@@ -16,18 +16,18 @@ hole_size = 2 + 0.1;
 
 difference()
 {
-    scale([1.15, 1.15]) translate([-25, 0]) spike();
+    scale([1.0, 1.0]) translate([-25, 0]) spike();
     
     
-    translate([-22, 17]) circle(d=hole_size, $fn=30);
-    translate([22, 17]) circle(d=hole_size, $fn=30);
+    translate([-19, 15]) circle(d=hole_size, $fn=30);
+    translate([19, 15]) circle(d=hole_size, $fn=30);
     
-    translate([-35, -17]) circle(d=hole_size, $fn=30);
-    translate([35, -17]) circle(d=hole_size, $fn=30);
+    translate([-31, -15]) circle(d=hole_size, $fn=30);
+    translate([31, -15]) circle(d=hole_size, $fn=30);
     
     
     /* Direction Buttons */
-    translate([-36, 0])
+    translate([-29, 0])
     {
         translate([0, 6]) rotate([0, 0, 45]) minkowski()
         {
@@ -51,7 +51,7 @@ difference()
         }
     }
     /* Action Buttons */
-    translate([32, 0])
+    translate([25, 0])
     {
         translate([0, 6]) rotate([0, 0, 45]) minkowski()
         {
@@ -76,32 +76,26 @@ difference()
     }
     
     /* USB */
-    translate([42, 13]) rotate([0, 0, 45]) minkowski()
+    translate([36, 11]) rotate([0, 0, 45]) minkowski()
     {
         square([5, 7], center=true);
         circle(r=0.5, $fn=30);
     }
     
     // CHG LED
-    translate([30, 15]) minkowski()
+    translate([26, 14]) minkowski()
     {
         square([3, 2], center=true);
         circle(r=0.5, $fn=30);
     }
     
     // Display Header
-    translate([0, 13]) minkowski()
+    translate([0, 11]) minkowski()
     {
-        square([12, 1], center=true);
+        square([16, 1], center=true);
         circle(r=0.5, $fn=30);
     }
 
 }
 
-    color("green")translate([-5.5, -22]) minkowski()
-    {
-        square([11, 34]);
-        circle(r=0.5, $fn=30);
-    }
-
-//color("blue") translate([0, 0, 1]) square([47, 27], center=true);
+color("blue") translate([0, 0, 1]) square([34.5, 23], center=true);
