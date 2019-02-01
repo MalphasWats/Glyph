@@ -1,0 +1,6 @@
+
+.DS_Store
+*.dxf
+Glyph-cache.lib
+Glyph.bak
+Glyph.kicad_pcb-bak
