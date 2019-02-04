@@ -14,23 +14,29 @@ module spike()
 
 module shard()
 {
-    difference()
+    union()//difference()
     {
         minkowski()
         {
-            square([20, 30]);
-            circle(r=2.5, $fn=30);
+            square([30, 20], center=true);
+            circle(r=1, $fn=30);
         }
-        translate([12.5, -2.5-1]) circle(r=4, $fn=30);
-        translate([12.5, 32.5+1]) circle(r=4, $fn=30);
+        
     }
     
-    translate([-8.5, 6.37 , 0]) 
+    translate([0, 14 , 0]) 
     difference()
     {
-        color("red") square([7, 17.26]);
-        rotate([0, 0, 45]) color("blue") square([1.5], center=true);
-        translate([0, 17.26]) rotate([0, 0, 45]) color("blue") square([1.5], center=true);
+        color("red") square([17.26, 7], center=true);
+        
+        translate([17.26/2, 3.5])rotate([0, 0, 45]) 
+        {
+            square(1.5, center=true);
+        }
+        translate([-17.26/2, 3.5]) rotate([0, 0, 45])
+        {
+            square(1.5, center=true);
+        }
     }
 }
 
@@ -38,31 +44,38 @@ hole_size = 2 + 0.1;
 
 difference()
 {
-    scale([1.15, 1.15]) translate([-25, 0]) spike();
+    scale([1.0, 1.0]) translate([-25, 0]) spike();
     
     
-    translate([-22, 17]) circle(d=hole_size, $fn=30);
-    translate([22, 17]) circle(d=hole_size, $fn=30);
+    translate([-19, 15]) circle(d=hole_size, $fn=30);
+    translate([19, 15]) circle(d=hole_size, $fn=30);
     
-    translate([-35, -17]) circle(d=hole_size, $fn=30);
-    translate([35, -17]) circle(d=hole_size, $fn=30);
+    translate([-31, -15]) circle(d=hole_size, $fn=30);
+    translate([31, -15]) circle(d=hole_size, $fn=30);
     
     // Battery
-    translate([30.00, 0]) minkowski()
+    translate([26.00, 0]) minkowski()
     {
-        square([18, 24], center=true);
+        square([15, 20], center=true);
         circle(d=1, $fn=30);
     }
     
-    // Speaker
-    translate([-32, 0]) circle(r=7, $fn=30);
-    translate([-32, -7]) square([4, 4], center=true);
-    
-    // Shard socket
-    translate([0, -16]) minkowski()
+    /* USB */
+    translate([36.5, 11]) rotate([0, 0, 45]) minkowski()
     {
-        square([18, 10], center=true);
-        circle(r=0.8, $fn=30);
+        square([15, 7], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    // Speaker
+    translate([-28, 0]) circle(r=7, $fn=30);
+    translate([-28, -7]) square([4, 4], center=true);
+    
+    // Shard Socket
+    translate([0, -8]) minkowski()
+    {
+        square([19, 7.4], center=true);
+        circle(r=0.5, $fn=30);
     }
     
     translate([0, 12]) minkowski()
@@ -72,18 +85,18 @@ difference()
     }
     
     // power
-    translate([-42.5, 13]) rotate([0, 0, 45]) minkowski()
+    translate([-36, 11]) rotate([0, 0, 45]) minkowski()
     {
         square([8, 4], center=true);
         circle(d=2, center=true, $fn=30);
     }
     
     //reset
-    translate([-24, -12.5]) minkowski()
+    translate([-17, -9.2]) minkowski()
     {
         square([5, 5], center=true);
         circle(r=0.5, $fn=30);
     }
 }
 
-translate([15, -6, -1]) rotate([0, 0, 90]) shard();
+//color("red") translate([0, 8, -1.1]) rotate([0, 0, 180]) shard();

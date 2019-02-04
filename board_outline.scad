@@ -12,26 +12,21 @@ module spike()
     }
 }
 
-module shard()
-{
-    difference()
-    {
-        minkowski()
-        {
-            square([20, 30]);
-            circle(r=2.5, $fn=30);
-        }
-        translate([12.5, -2.5-1]) circle(r=4, $fn=30);
-        translate([12.5, 32.5+1]) circle(r=4, $fn=30);
-    }
-}
+hole_size = 2 + 0.1;
 
 difference()
 {
-    scale([1.15, 1.15]) translate([-25, 0]) spike();
+    scale([1.0, 1.0]) translate([-25, 0]) spike();
+    
+    
+    translate([-19, 15]) circle(d=hole_size, $fn=30);
+    translate([19, 15]) circle(d=hole_size, $fn=30);
+    
+    translate([-31, -15]) circle(d=hole_size, $fn=30);
+    translate([31, -15]) circle(d=hole_size, $fn=30);
     
     // Display Header
-    translate([0, 13]) minkowski()
+    translate([0, 12]) minkowski()
     {
         square([12, 1], center=true);
         circle(r=0.5, $fn=30);

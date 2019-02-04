@@ -12,6 +12,34 @@ module spike()
     }
 }
 
+module shard()
+{
+    union()//difference()
+    {
+        minkowski()
+        {
+            square([30, 20], center=true);
+            circle(r=1, $fn=30);
+        }
+        
+    }
+    
+    translate([0, 14 , 0]) 
+    difference()
+    {
+        color("red") square([17.26, 7], center=true);
+        
+        translate([17.26/2, 3.5])rotate([0, 0, 45]) 
+        {
+            square(1.5, center=true);
+        }
+        translate([-17.26/2, 3.5]) rotate([0, 0, 45])
+        {
+            square(1.5, center=true);
+        }
+    }
+}
+
 hole_size = 2 + 0.1;
 
 difference()
@@ -75,13 +103,6 @@ difference()
         }
     }
     
-    /* USB */
-    translate([36, 11]) rotate([0, 0, 45]) minkowski()
-    {
-        square([5, 7], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
     // CHG LED
     translate([26, 14]) minkowski()
     {
@@ -90,7 +111,7 @@ difference()
     }
     
     // Display Header
-    translate([0, 11]) minkowski()
+    translate([0, 12]) minkowski()
     {
         square([16, 1], center=true);
         circle(r=0.5, $fn=30);
@@ -98,4 +119,5 @@ difference()
 
 }
 
-color("blue") translate([0, 0, 1]) square([34.5, 23], center=true);
+//color("red") translate([0, 8, -1.1]) rotate([0, 0, 180]) shard();
+//color("blue") translate([0, 0, 1]) square([34.5, 23], center=true);
