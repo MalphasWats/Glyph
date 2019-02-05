@@ -28,7 +28,7 @@ difference()
     // Display Header
     translate([0, 12]) minkowski()
     {
-        square([12, 1], center=true);
+        square([16, 1], center=true);
         circle(r=0.5, $fn=30);
     }
 }
