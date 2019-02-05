@@ -103,6 +103,13 @@ difference()
         }
     }
     
+    // USR LED
+    translate([-26, 14]) minkowski()
+    {
+        square([3, 2], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
     // CHG LED
     translate([26, 14]) minkowski()
     {
