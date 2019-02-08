@@ -78,7 +78,7 @@ difference()
         circle(r=0.5, $fn=30);
     }
     
-    translate([0, 12]) minkowski()
+    translate([0, 10]) minkowski()
     {
         square([18, 15], center=true);
         circle(r=0.8, $fn=30);
@@ -95,6 +95,48 @@ difference()
     translate([-17, -9.2]) minkowski()
     {
         square([5, 5], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    //Regulator Circuit
+    translate([-18, 6]) rotate([0, 0, 45]) minkowski()
+    {
+        square([4, 10], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    //Monitor Circuit
+    translate([38.5, -2]) minkowski()
+    {
+        square([3, 5], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    //charge circuit
+    translate([14, -8]) minkowski()
+    {
+        square([3, 5], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    //charge IC
+    translate([24, -14]) minkowski()
+    {
+        square([5, 3], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    // USR LED resistor
+    translate([-26, 14]) minkowski()
+    {
+        square([3, 1], center=true);
+        circle(r=0.5, $fn=30);
+    }
+    
+    // CHG LED resistor
+    translate([26, 14]) minkowski()
+    {
+        square([3, 1], center=true);
         circle(r=0.5, $fn=30);
     }
 }
