@@ -54,9 +54,9 @@ difference()
     translate([31, -15]) circle(d=hole_size, $fn=30);
     
     // Battery
-    translate([26.00, 0]) minkowski()
+    translate([24.00, 0]) minkowski()
     {
-        square([15, 20], center=true);
+        square([19, 22], center=true);
         circle(d=1, $fn=30);
     }
     
@@ -112,10 +112,10 @@ difference()
         circle(r=0.5, $fn=30);
     }
     
-    //charge circuit
-    translate([14, -8]) minkowski()
+    /*//charge circuit
+    translate([14, 0]) minkowski()
     {
-        square([3, 5], center=true);
+        square([4, 20], center=true);
         circle(r=0.5, $fn=30);
     }
     
@@ -124,7 +124,7 @@ difference()
     {
         square([5, 3], center=true);
         circle(r=0.5, $fn=30);
-    }
+    }*/
     
     // USR LED resistor
     translate([-26, 14]) minkowski()
@@ -140,5 +140,7 @@ difference()
         circle(r=0.5, $fn=30);
     }
 }
+
+//color("green") translate([27, -2]) square([15, 18], center=true);
 
 //color("red") translate([0, 8, -1.1]) rotate([0, 0, 180]) shard();

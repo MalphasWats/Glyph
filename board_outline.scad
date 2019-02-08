@@ -25,10 +25,10 @@ difference()
     translate([-31, -15]) circle(d=hole_size, $fn=30);
     translate([31, -15]) circle(d=hole_size, $fn=30);
     
-    // Display Header
+    /*// Display Header
     translate([0, 12]) minkowski()
     {
         square([16, 1], center=true);
         circle(r=0.5, $fn=30);
-    }
+    }*/
 }

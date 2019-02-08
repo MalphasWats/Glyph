@@ -126,7 +126,7 @@ Text GLabel 6950 4300 1    50   Input ~ 0
 SND
 Text GLabel 9650 2350 0    50   Input ~ 0
 D_RST
-Text GLabel 6550 4300 1    50   Input ~ 0
+Text GLabel 6750 4300 1    50   Input ~ 0
 D_RST
 Text GLabel 9650 2450 0    50   Input ~ 0
 D_DC
@@ -134,7 +134,7 @@ Text GLabel 6650 4300 1    50   Input ~ 0
 D_DC
 Text GLabel 9650 2250 0    50   Input ~ 0
 D_CS
-Text GLabel 6450 4300 1    50   Input ~ 0
+Text GLabel 6850 4300 1    50   Input ~ 0
 D_CS
 $Comp
 L power:+3.3V #PWR025
@@ -158,11 +158,11 @@ F 3 "" H 8700 4050 50  0001 C CNN
 	1    8700 4050
 	1    0    0    -1  
 $EndComp
-Text GLabel 6750 4300 1    50   Input ~ 0
+Text GLabel 6550 4300 1    50   Input ~ 0
 D_SCK
 Text GLabel 9650 2750 0    50   Input ~ 0
 D_SCK
-Text GLabel 6850 4300 1    50   Input ~ 0
+Text GLabel 6450 4300 1    50   Input ~ 0
 D_MOSI
 Text GLabel 9650 2850 0    50   Input ~ 0
 D_MOSI

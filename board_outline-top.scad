@@ -55,7 +55,7 @@ difference()
     
     
     /* Direction Buttons */
-    translate([-29, 0])
+    translate([-30, 0])
     {
         translate([0, 6]) rotate([0, 0, 45]) minkowski()
         {
@@ -117,12 +117,14 @@ difference()
         circle(r=0.5, $fn=30);
     }
     
-    // Display Header
+    /*// Display Header
     translate([0, 12]) minkowski()
     {
         square([16, 1], center=true);
         circle(r=0.5, $fn=30);
-    }
+    }*/
+    
+    translate([0, 0, 0]) square([34.5, 23], center=true);
 
 }
 
