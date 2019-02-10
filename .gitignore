@@ -4,3 +4,8 @@
 Glyph-cache.lib
 Glyph.bak
 Glyph.kicad_pcb-bak
+*.bak
+shard_1284/shard-rescue.lib
+shard_1284/shard-rescue.dcm
+shard_1284/shard-cache.lib
+shard_1284/shard.kicad_pcb-bak
