@@ -19,11 +19,11 @@ difference()
     scale([1.0, 1.0]) translate([-25, 0]) spike();
     
     
-    translate([-19, 15]) circle(d=hole_size, $fn=30);
+    /*translate([-19, 15]) circle(d=hole_size, $fn=30);
     translate([19, 15]) circle(d=hole_size, $fn=30);
     
     translate([-31, -15]) circle(d=hole_size, $fn=30);
-    translate([31, -15]) circle(d=hole_size, $fn=30);
+    translate([31, -15]) circle(d=hole_size, $fn=30);*/
     
     /*// Display Header
     translate([0, 12]) minkowski()

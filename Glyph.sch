@@ -748,72 +748,6 @@ Connection ~ 5550 2800
 Wire Wire Line
 	5550 2800 5550 2850
 $Comp
-L Connector_Generic:Conn_01x01 J3
-U 1 1 5C586008
-P 5550 6500
-F 0 "J3" H 5630 6542 50  0000 L CNN
-F 1 "Screw Point 1" H 5630 6451 50  0000 L CNN
-F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6500 50  0001 C CNN
-F 3 "~" H 5550 6500 50  0001 C CNN
-	1    5550 6500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x01 J4
-U 1 1 5C5860B8
-P 5550 6650
-F 0 "J4" H 5630 6692 50  0000 L CNN
-F 1 "Screw Point 2" H 5630 6601 50  0000 L CNN
-F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6650 50  0001 C CNN
-F 3 "~" H 5550 6650 50  0001 C CNN
-	1    5550 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x01 J5
-U 1 1 5C586110
-P 5550 6800
-F 0 "J5" H 5630 6842 50  0000 L CNN
-F 1 "Screw Point 3" H 5630 6751 50  0000 L CNN
-F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6800 50  0001 C CNN
-F 3 "~" H 5550 6800 50  0001 C CNN
-	1    5550 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x01 J6
-U 1 1 5C586166
-P 5550 6950
-F 0 "J6" H 5630 6992 50  0000 L CNN
-F 1 "Screw Point 4" H 5630 6901 50  0000 L CNN
-F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6950 50  0001 C CNN
-F 3 "~" H 5550 6950 50  0001 C CNN
-	1    5550 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 5C5863A6
-P 5350 7100
-F 0 "#PWR04" H 5350 6850 50  0001 C CNN
-F 1 "GND" H 5355 6927 50  0000 C CNN
-F 2 "" H 5350 7100 50  0001 C CNN
-F 3 "" H 5350 7100 50  0001 C CNN
-	1    5350 7100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 7100 5350 6950
-Connection ~ 5350 6650
-Wire Wire Line
-	5350 6650 5350 6500
-Connection ~ 5350 6800
-Wire Wire Line
-	5350 6800 5350 6650
-Connection ~ 5350 6950
-Wire Wire Line
-	5350 6950 5350 6800
-$Comp
 L Custom~Library:1.3-OLED U1
 U 1 1 5C5982AE
 P 10250 2450
@@ -843,7 +777,7 @@ L Device:R R5
 U 1 1 5C5A7A8F
 P 9500 3550
 F 0 "R5" H 9570 3596 50  0000 L CNN
-F 1 "390k" H 9570 3505 50  0000 L CNN
+F 1 "290k" H 9570 3505 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9430 3550 50  0001 C CNN
 F 3 "" H 9500 3550 50  0001 C CNN
 	1    9500 3550
@@ -1059,10 +993,10 @@ $EndComp
 Text GLabel 7300 2850 1    50   Input ~ 0
 USR_LED
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 5C648AD4
 P 7300 3450
-F 0 "#PWR?" H 7300 3200 50  0001 C CNN
+F 0 "#PWR0103" H 7300 3200 50  0001 C CNN
 F 1 "GND" H 7305 3277 50  0000 C CNN
 F 2 "" H 7300 3450 50  0001 C CNN
 F 3 "" H 7300 3450 50  0001 C CNN
@@ -1073,4 +1007,70 @@ Text GLabel 6350 4300 1    50   Input ~ 0
 USR_LED
 Wire Wire Line
 	6350 4300 6350 4450
+$Comp
+L power:GND #PWR04
+U 1 1 5C5863A6
+P 5350 7100
+F 0 "#PWR04" H 5350 6850 50  0001 C CNN
+F 1 "GND" H 5355 6927 50  0000 C CNN
+F 2 "" H 5350 7100 50  0001 C CNN
+F 3 "" H 5350 7100 50  0001 C CNN
+	1    5350 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 7100 5350 6950
+Connection ~ 5350 6950
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5C586166
+P 5550 6950
+F 0 "J6" H 5630 6992 50  0000 L CNN
+F 1 "Screw Point 4" H 5630 6901 50  0000 L CNN
+F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6950 50  0001 C CNN
+F 3 "~" H 5550 6950 50  0001 C CNN
+	1    5550 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6950 5350 6800
+Connection ~ 5350 6800
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5C586110
+P 5550 6800
+F 0 "J5" H 5630 6842 50  0000 L CNN
+F 1 "Screw Point 3" H 5630 6751 50  0000 L CNN
+F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6800 50  0001 C CNN
+F 3 "~" H 5550 6800 50  0001 C CNN
+	1    5550 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6800 5350 6650
+Wire Wire Line
+	5350 6650 5350 6500
+Connection ~ 5350 6650
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5C5860B8
+P 5550 6650
+F 0 "J4" H 5630 6692 50  0000 L CNN
+F 1 "Screw Point 2" H 5630 6601 50  0000 L CNN
+F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6650 50  0001 C CNN
+F 3 "~" H 5550 6650 50  0001 C CNN
+	1    5550 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5C586008
+P 5550 6500
+F 0 "J3" H 5630 6542 50  0000 L CNN
+F 1 "Screw Point 1" H 5630 6451 50  0000 L CNN
+F 2 "Custom Footprints:M2_SCREW_HOLE" H 5550 6500 50  0001 C CNN
+F 3 "~" H 5550 6500 50  0001 C CNN
+	1    5550 6500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
