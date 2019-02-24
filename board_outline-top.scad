@@ -103,40 +103,26 @@ difference()
         }
     }
     
-    // USR LED
+    // USR LED 1
     translate([-26, 14]) minkowski()
     {
-        square([3, 1], center=true);
+        square([3, 2], center=true);
         circle(r=0.5, $fn=30);
     }
     
-    // CHG LED
+    // USR LED 2
     translate([26, 14]) minkowski()
     {
-        square([3, 1], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    // RGB LED 1
-    translate([-21, 8]) minkowski()
-    {
         square([3, 2], center=true);
         circle(r=0.5, $fn=30);
     }
     
-    // RGB LED 2
-    translate([21, 8]) minkowski()
+    /* USB CHG LED */
+    translate([36, 10.5]) rotate([0, 0, 45]) minkowski()
     {
-        square([3, 2], center=true);
+        square([1, 3], center=true);
         circle(r=0.5, $fn=30);
     }
-    
-    /*// Display Header
-    translate([0, 12]) minkowski()
-    {
-        square([16, 1], center=true);
-        circle(r=0.5, $fn=30);
-    }*/
     
     translate([0, 0, 0]) square([34.5, 23], center=true);
 

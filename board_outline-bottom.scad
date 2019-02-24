@@ -54,9 +54,9 @@ difference()
     translate([31, -15]) circle(d=hole_size, $fn=30);
     
     // Battery
-    translate([0, -2]) minkowski()
+    translate([0, 0]) minkowski()
     {
-        square([30, 20], center=true);
+        square([30, 24], center=true);
         circle(d=1, $fn=30);
     }
     
@@ -66,6 +66,12 @@ difference()
         square([5, 8], center=true);
         circle(r=0.5, $fn=30);
     }
+    
+    /*#translate([34, 8.5]) rotate([0, 0, 45]) minkowski()
+    {
+        square([5, 8], center=true);
+        circle(r=0.5, $fn=30);
+    }*/
     
     // Speaker
     translate([-28, 0]) circle(r=7, $fn=30);
@@ -78,20 +84,6 @@ difference()
         circle(d=2, center=true, $fn=30);
     }
     
-    // RGB LED 1
-    /*translate([-20, 8]) minkowski()
-    {
-        square([3, 2], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    // RGB LED 2
-    translate([20, 8]) minkowski()
-    {
-        square([3, 2], center=true);
-        circle(r=0.5, $fn=30);
-    }*/
-    
     //reset
     translate([-20, -10]) minkowski()
     {
@@ -100,51 +92,13 @@ difference()
     }
     
     //ICs
-    translate([26, -2]) minkowski()
+    translate([23, 0]) minkowski()
     {
-        square([10, 16], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    //Regulator Circuit
-    translate([-10, 10]) rotate([0, 0, 0]) minkowski()
-    {
-        square([10, 4], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    //Monitor Circuit
-    translate([37, -1]) minkowski()
-    {
-        square([4, 6], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    //charge circuit
-    /*translate([14, 0]) minkowski()
-    {
-        square([4, 20], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    //charge IC
-    translate([24, -14]) minkowski()
-    {
-        square([5, 3], center=true);
-        circle(r=0.5, $fn=30);
-    }*/
-    
-    // USR LED resistor
-    translate([-26, 14]) minkowski()
-    {
-        square([3, 1], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
-    // CHG LED resistor
-    translate([26, 14]) minkowski()
-    {
-        square([3, 1], center=true);
+        hull()
+        {
+            square([10, 22], center=true);
+            translate([8.5, -3]) square([5, 16], center=true);
+        }
         circle(r=0.5, $fn=30);
     }
 }
