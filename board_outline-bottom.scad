@@ -67,12 +67,6 @@ difference()
         circle(r=0.5, $fn=30);
     }
     
-    /*#translate([34, 8.5]) rotate([0, 0, 45]) minkowski()
-    {
-        square([5, 8], center=true);
-        circle(r=0.5, $fn=30);
-    }*/
-    
     // Speaker
     translate([-28, 0]) circle(r=7, $fn=30);
     translate([-28, -7]) square([4, 4], center=true);
@@ -99,6 +93,13 @@ difference()
             square([10, 22], center=true);
             translate([8.5, -3]) square([5, 16], center=true);
         }
+        circle(r=0.5, $fn=30);
+    }
+    
+    //ISP
+    translate([-25, 14]) minkowski()
+    {
+        square([7, 4.5], center=true);
         circle(r=0.5, $fn=30);
     }
 }
