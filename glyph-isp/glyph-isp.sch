@@ -340,7 +340,7 @@ F 3 "" H 6900 3400 50  0001 C CNN
 	1    6900 3400
 	1    0    0    -1  
 $EndComp
-Text GLabel 3800 3350 2    50   Input ~ 0
+Text GLabel 3800 4050 2    50   Input ~ 0
 TARGET_RESET
 Text GLabel 5950 4800 0    50   Input ~ 0
 MISO
