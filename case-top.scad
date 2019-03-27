@@ -32,22 +32,22 @@ difference()
         translate([0, 6]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([-6, 0]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([0, -6]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([6, 0]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
     }
     /* Action Buttons */
@@ -56,22 +56,22 @@ difference()
         translate([0, 6]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([-6, 0]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([0, -6]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
         translate([6, 0]) rotate([0, 0, 45]) minkowski()
         {
             square([5, 5], center=true);
-            circle(r=0.5, $fn=30);
+            circle(r=0.8, $fn=30);
         }
     }
     
@@ -103,7 +103,7 @@ difference()
         {
             translate([0, 0]) square([34.5, 23], center=true);
     
-            translate([0, -12.5]) square([10, 1], center=true);
+            translate([0, -12.5]) square([14, 1], center=true);
         }
         circle(r=0.5, $fn=30);
     }

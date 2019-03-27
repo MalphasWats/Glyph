@@ -33,23 +33,14 @@ difference()
         circle(d=1, $fn=30);
     }
     
-    /* USB */
-    translate([36.5, 11]) rotate([0, 0, 45]) minkowski()
-    {
-        square([6, 8], center=true);
-        circle(r=0.5, $fn=30);
-    }
-    
     // Speaker
-    translate([-28, 0]) circle(r=7, $fn=30);
-    translate([-28, -7]) square([4, 4], center=true);
+    translate([-28, 0]) circle(r=0.5, $fn=30);
+    translate([-30, 0]) circle(r=0.5, $fn=30);
+    translate([-26, 0]) circle(r=0.5, $fn=30);
+    translate([-28, 2]) circle(r=0.5, $fn=30);
+    translate([-28, -2]) circle(r=0.5, $fn=30);
     
-    // power
-    translate([-36.5, 11.5]) rotate([0, 0, 45]) minkowski()
-    {
-        square([8, 5], center=true);
-        circle(d=2, center=true, $fn=30);
-    }
+    
     
     //reset
     translate([-20, -10]) minkowski()
@@ -57,24 +48,7 @@ difference()
         square([5, 5], center=true);
         circle(r=0.8, $fn=30);
     }
-    
-    //ICs
-    translate([23, 0]) minkowski()
-    {
-        hull()
-        {
-            square([10, 22], center=true);
-            translate([8.5, -3]) square([5, 16], center=true);
-        }
-        circle(r=0.5, $fn=30);
-    }
-    
-    //ISP
-    translate([-25, 14]) minkowski()
-    {
-        square([7, 4], center=true);
-        circle(r=0.5, $fn=30);
-    }
+
 }
 
 /*#translate([15.5,0]) square([2, 2]);
