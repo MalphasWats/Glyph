@@ -8,6 +8,7 @@ This repository contains the mechanical components - KiCAD PCB & laser cut case.
 
 ## Specification
 
+* ATMega1284P @ 20MHz. 128kB Flash, 16kB SRAM
 * 1.3" monochrome OLED display
 * 8 soft buttons
 * 2 channel sound via piezo speaker
