@@ -16,8 +16,12 @@ hole_size = 2 + 0.1;
 
 difference()
 {
-    scale([1.04, 1.04]) translate([-25, 0]) spike();
-    
+    translate([-25.5, -0.5]) 
+    minkowski()
+    {
+        spike();
+        square(2.0);
+    }
     
     translate([-19, 15]) circle(d=hole_size, $fn=30);
     translate([19, 15]) circle(d=hole_size, $fn=30);
@@ -108,10 +112,10 @@ difference()
         circle(r=0.5, $fn=30);
     }
     
-     translate([-7, 16]) scale([0.14, 0.14]) mirror([0, 1, 0]) union()
-{
+    //translate([-7, 16]) scale([0.14, 0.14]) mirror([0, 1, 0]) union()
+//{
 
-    translate([18, 3]) square(1.01, center=true);
+    /*translate([18, 3]) square(1.01, center=true);
     translate([19, 3]) square(1.01, center=true);
     translate([20, 3]) square(1.01, center=true);
     translate([21, 3]) square(1.01, center=true);
@@ -476,9 +480,6 @@ difference()
     translate([42, 20]) square(1.01, center=true);
     translate([43, 20]) square(1.01, center=true);
     translate([44, 20]) square(1.01, center=true);
-    translate([45, 20]) square(1.01, center=true);
+    translate([45, 20]) square(1.01, center=true);*/
+//}
 }
-}
-
-//color("red") translate([0, 8, -1.1]) rotate([0, 0, 180]) shard();
-//color("blue") translate([0, 0, 1]) square([34.5, 23], center=true);
