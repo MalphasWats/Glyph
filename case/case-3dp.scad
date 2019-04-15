@@ -15,8 +15,6 @@ module spike()
 hole_size = 2 + 0.1;
 difference()
 {
-scale([1.0, 1.0, 1])//1.04)
-{
     union()
     {
 
@@ -121,13 +119,17 @@ scale([1.0, 1.0, 1])//1.04)
             }
         }
     }
-}
 
-scale([1.02, 1.02, 1.0]) translate([-25, 0, 6.0]) color("blue") linear_extrude(height=1.8) spike(); 
+    scale([1.00, 1.00, 1.0]) translate([-25.2, -0.2, 6.0]) color("blue") 
+    minkowski()
+    {
+        linear_extrude(height=1.8) spike();
+        cube(0.4);
+    }
 
-            translate([-19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
-            translate([19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
-            
-            translate([-31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
-            translate([31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([-19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                
+                translate([-31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
 }
