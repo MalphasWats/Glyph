@@ -18,10 +18,15 @@ difference()
     union()
     {
 
-        color("red")translate([0, 0, 3])linear_extrude(height=4.6)
+        color("red") translate([0, 0, 3]) linear_extrude(height=5)
         difference()
         {
-            scale([1.04, 1.1]) translate([-25, 0]) spike();
+            translate([-25.5, -0.5]) 
+            minkowski()
+            {
+                spike();
+                square(2.0);
+            }
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
@@ -81,10 +86,15 @@ difference()
             }*/
         }
 
-        translate([0, 0, 0])linear_extrude(height=3)
+        linear_extrude(height=3)
         difference()
         {
-            scale([1.04, 1.1]) translate([-25, 0]) spike();
+            translate([-25.5, -0.5]) 
+            minkowski()
+            {
+                spike();
+                square(2.0);
+            }
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
@@ -108,10 +118,14 @@ difference()
             }
         }
 
-        difference()
+        color("green") difference()
         {
-         translate([0, 0, -1]) linear_extrude(height=1)
-            scale([1.04, 1.1]) translate([-25, 0])spike();
+            translate([-25.5, -0.5, -1.0]) linear_extrude(height=1.5) 
+            minkowski()
+            {
+                spike();
+                square(2.0);
+            }
             
             translate([-20, -10, -1.05]) 
             {
@@ -120,16 +134,17 @@ difference()
         }
     }
 
-    scale([1.00, 1.00, 1.0]) translate([-25.2, -0.2, 6.0]) color("blue") 
+    translate([-24.8, 0.2, 6.4])
+    color("blue") 
     minkowski()
     {
         linear_extrude(height=1.8) spike();
         cube(0.4);
     }
 
-                translate([-19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
-                translate([19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([-19, 15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([19, 15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
                 
-                translate([-31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
-                translate([31, -15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([-31, -15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([31, -15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
 }
