@@ -123,7 +123,7 @@ scale([1.0, 1.0, 1])//1.04)
     }
 }
 
-translate([-25, 0, 6.0]) color("blue") linear_extrude(height=1.8)scale(1.02) spike(); 
+translate([-25, 0, 6.0]) color("blue") linear_extrude(height=1.8)scale([1.0, 1.02, 1.0]) spike(); 
 
             translate([-19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
             translate([19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
