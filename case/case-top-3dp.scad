@@ -12,12 +12,12 @@ module spike()
     }
 }
 
-hole_size = 2 + 0.1;
+hole_size = 2 + 0.3;
 
 difference()
 {
 
-    linear_extrude(height=2.5)
+    linear_extrude(height=2.8)
     difference()
     {
         translate([-25.5, -0.5]) 
@@ -39,22 +39,23 @@ difference()
         {
             translate([0, 6]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
+            
             translate([-6, 0]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
             translate([0, -6]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
             translate([6, 0]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
         }
@@ -63,22 +64,22 @@ difference()
         {
             translate([0, 6]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
             translate([-6, 0]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
             translate([0, -6]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
             translate([6, 0]) rotate([0, 0, 45]) minkowski()
             {
-                square([5, 5], center=true);
+                square([5.2, 5.2], center=true);
                 circle(r=0.8, $fn=30);
             }
         }
@@ -109,7 +110,7 @@ difference()
         {
             union()
             {
-                translate([0, 0]) square([34.5, 23], center=true);
+                translate([0, 0]) square([35.5, 24], center=true);
         
                 translate([0, -12.5]) square([14, 1], center=true);
             }
@@ -117,13 +118,52 @@ difference()
         }
     }
     
-    translate([-19, 15, 1.0]) cylinder(d=4, h=1.8, $fn=30);
-    translate([19, 15, 1.0]) cylinder(d=4, h=1.8, $fn=30);
+    translate([-19, 15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
+    translate([19, 15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
         
-    translate([-31, -15, 1.0]) cylinder(d=4, h=1.8, $fn=30);
-    translate([31, -15, 1.0]) cylinder(d=4, h=1.8, $fn=30);
+    translate([-31, -15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
+    translate([31, -15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
     
-    translate([-10.5, 17, 1.4]) linear_extrude(height=1.21) logo();
+    translate([-30, 0, 0.4])
+    {
+        translate([0, 6]) rotate([0, 0, 45])
+        {
+            cube([9, 2, 1], center=true);
+        }
+        translate([-6, 0]) rotate([0, 0, 45])
+        {
+            cube([2, 9, 1], center=true);
+        }
+        translate([0, -6]) rotate([0, 0, 45])
+        {
+            cube([9, 2, 1], center=true);
+        }
+        translate([6, 0]) rotate([0, 0, 45])
+        {
+            cube([2, 9, 1], center=true);
+        }
+    }
+    
+    translate([30, 0, 0.4])
+    {
+        translate([0, 6]) rotate([0, 0, 45])
+        {
+            cube([2, 9, 1], center=true);
+        }
+        translate([-6, 0]) rotate([0, 0, 45])
+        {
+            cube([9, 2, 1], center=true);
+        }
+        translate([0, -6]) rotate([0, 0, 45])
+        {
+            cube([2, 9, 1], center=true);
+        }
+        translate([6, 0]) rotate([0, 0, 45])
+        {
+            cube([9, 2, 1], center=true);
+        }
+    }
+    //translate([-10.5, 17, 1.4]) linear_extrude(height=1.21) logo();
 }
     
 module logo()
