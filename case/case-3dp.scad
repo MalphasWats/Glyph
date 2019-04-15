@@ -116,6 +116,13 @@ difference()
                 square([5, 5], center=true);
                 circle(r=0.8, $fn=30);
             }
+            
+            //Speaker
+            translate([-28, 0]) circle(r=0.5, $fn=30);
+            translate([-30, 0]) circle(r=0.5, $fn=30);
+            translate([-26, 0]) circle(r=0.5, $fn=30);
+            translate([-28, 2]) circle(r=0.5, $fn=30);
+            translate([-28, -2]) circle(r=0.5, $fn=30);
         }
 
         color("green") difference()
@@ -129,8 +136,14 @@ difference()
             
             translate([-20, -10, -1.05]) 
             {
-                cylinder(r=1.0, h=1.1, $fn=30);
+                cylinder(r=1.0, h=1.6, $fn=30);
             }
+            
+            translate([-28, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
+            translate([-30, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
+            translate([-26, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
+            translate([-28, 2, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
+            translate([-28, -2, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
         }
     }
 
