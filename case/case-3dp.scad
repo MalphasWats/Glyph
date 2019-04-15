@@ -23,7 +23,7 @@ scale([1.0, 1.0, 1])//1.04)
         color("red")translate([0, 0, 3])linear_extrude(height=4.6)
         difference()
         {
-            scale([1.02, 1.1]) translate([-25, 0]) spike();
+            scale([1.04, 1.1]) translate([-25, 0]) spike();
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
@@ -40,9 +40,9 @@ scale([1.0, 1.0, 1])//1.04)
             }
             
             /* USB */
-            translate([36.5, 11]) rotate([0, 0, 45]) minkowski()
+            translate([37.0, 11.5]) rotate([0, 0, 45]) minkowski()
             {
-                square([6, 8], center=true);
+                square([6.5, 8], center=true);
                 circle(r=0.5, $fn=30);
             }
             
@@ -86,7 +86,7 @@ scale([1.0, 1.0, 1])//1.04)
         translate([0, 0, 0])linear_extrude(height=3)
         difference()
         {
-            scale([1.02, 1.1]) translate([-25, 0]) spike();
+            scale([1.04, 1.1]) translate([-25, 0]) spike();
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
@@ -113,7 +113,7 @@ scale([1.0, 1.0, 1])//1.04)
         difference()
         {
          translate([0, 0, -1]) linear_extrude(height=1)
-            scale([1.02, 1.1]) translate([-25, 0])spike();
+            scale([1.04, 1.1]) translate([-25, 0])spike();
             
             translate([-20, -10, -1.05]) 
             {
@@ -123,7 +123,7 @@ scale([1.0, 1.0, 1])//1.04)
     }
 }
 
-translate([-25, 0, 6.0]) color("blue") linear_extrude(height=1.8)scale([1.0, 1.02, 1.0]) spike(); 
+scale([1.02, 1.02, 1.0]) translate([-25, 0, 6.0]) color("blue") linear_extrude(height=1.8) spike(); 
 
             translate([-19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
             translate([19, 15, 3.01]) cylinder(d=4.8, h=3, $fn=6);
