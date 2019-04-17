@@ -18,7 +18,7 @@ difference()
     union()
     {
 
-        color("red") translate([0, 0, 3]) linear_extrude(height=5)
+        color("red") translate([0, 0, 3]) linear_extrude(height=5.1)
         difference()
         {
             translate([-25.5, -0.5]) 
@@ -155,9 +155,35 @@ difference()
         cube(0.4);
     }
 
-                translate([-19, 15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
-                translate([19, 15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([-19, 15, 4.01]) rotate([0, 0, 30]) cylinder(d=4.9, h=3, $fn=6);
+                translate([19, 15, 4.01]) rotate([0, 0, 30]) cylinder(d=4.9, h=3, $fn=6);
                 
-                translate([-31, -15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
-                translate([31, -15, 4.01]) cylinder(d=4.8, h=3, $fn=6);
+                translate([-31, -15, 4.01]) cylinder(d=4.9, h=3, $fn=6);
+                translate([31, -15, 4.01]) cylinder(d=4.9, h=3, $fn=6);
+    
+    
+    //ISP
+    translate([-25, 14]) minkowski()
+    {
+        cube([7, 4, 5], center=true);
+        cylinder(r=0.5, h=5, $fn=30);
+    }
+    translate([-25, 14, -1.6]) minkowski()
+    {
+        cube([12, 7, 3], center=true);
+        cylinder(r=0.5, h=3, $fn=30);
+    }
 }
+
+color("orange") translate([-25, 14, 0.3]) minkowski()
+{
+    cube([11.0, 6.0, 2.6], center=true);
+    cylinder(r=0.5, h=1, $fn=30);
+}
+
+translate([-25, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-25, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-30, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-30, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-20, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-20, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
