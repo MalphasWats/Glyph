@@ -57,7 +57,7 @@ difference()
             translate([-36.5, 11.5]) rotate([0, 0, 45]) minkowski()
             {
                 square([8, 5], center=true);
-                circle(d=2, center=true, $fn=30);
+                circle(d=2, $fn=30);
             }
             
             //reset
@@ -175,15 +175,17 @@ difference()
     }
 }
 
-color("orange") translate([-25, 14, 0.3]) minkowski()
+color("orange") translate([-25, 14, 0.25]) minkowski()
 {
-    cube([11.0, 6.0, 2.6], center=true);
+    cube([10.6, 5.6, 2.5], center=true);
     cylinder(r=0.5, h=1, $fn=30);
 }
 
-translate([-25, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
-translate([-25, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
-translate([-30, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
-translate([-30, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
-translate([-20, 11, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
-translate([-20, 17, 1.0]) cylinder(r=0.5, h=2.6, $fn=30);
+translate([-27, 11, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-27, 17, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-23, 11, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-23, 17, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-30, 11, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-30, 17, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-20, 11, 2.0]) cube([0.5, 0.5, 2.6], center=true);
+translate([-20, 17, 2.0]) cube([0.5, 0.5, 2.6], center=true);

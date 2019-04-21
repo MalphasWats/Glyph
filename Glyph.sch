@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Glyph-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -70,7 +71,7 @@ BTN_C
 Wire Wire Line
 	600  3850 1050 3850
 $Comp
-L Custom~Library:Speaker LS1
+L Custom_Library:Speaker LS1
 U 1 1 5BAE0F63
 P 2350 7350
 F 0 "LS1" H 2315 6933 50  0000 C CNN
@@ -633,7 +634,7 @@ Connection ~ 5700 1550
 Wire Wire Line
 	5700 1550 5700 1600
 $Comp
-L Custom~Library:1.3-OLED U1
+L Custom_Library:1.3-OLED U1
 U 1 1 5C5982AE
 P 5350 7300
 F 0 "U1" V 5650 5700 50  0000 L CNN
@@ -1039,7 +1040,7 @@ L Device:Crystal_Small Y1
 U 1 1 5C73094D
 P 8800 1600
 F 0 "Y1" V 8846 1512 50  0000 R CNN
-F 1 "20MHz" V 8755 1512 50  0000 R CNN
+F 1 "16MHz" V 8755 1512 50  0000 R CNN
 F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm" H 8800 1600 50  0001 C CNN
 F 3 "~" H 8800 1600 50  0001 C CNN
 	1    8800 1600
