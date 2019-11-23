@@ -28,10 +28,10 @@ difference()
         }
         
         translate([-19, 15]) circle(d=hole_size, $fn=30);
-        translate([19, 15]) circle(d=hole_size, $fn=30);
+        translate([19.5, 15]) circle(d=hole_size, $fn=30);
         
         translate([-31, -15]) circle(d=hole_size, $fn=30);
-        translate([31, -15]) circle(d=hole_size, $fn=30);
+        translate([31.5, -15]) circle(d=hole_size, $fn=30);
         
         
         /* Direction Buttons */
@@ -119,10 +119,10 @@ difference()
     }
     
     translate([-19, 15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
-    translate([19, 15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
+    translate([19.5, 15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
         
     translate([-31, -15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
-    translate([31, -15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
+    translate([31.5, -15, 1.3]) cylinder(d=4.1, h=1.8, $fn=30);
     
     translate([-30, 0, 0.4])
     {

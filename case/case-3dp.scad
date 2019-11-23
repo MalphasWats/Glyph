@@ -18,7 +18,7 @@ difference()
     union()
     {
 
-        color("red") translate([0, 0, 3]) linear_extrude(height=5.1)
+        color("red") translate([0, 0, 3]) linear_extrude(height=5.6)
         difference()
         {
             translate([-25.5, -0.5]) 
@@ -30,10 +30,10 @@ difference()
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
-            translate([19, 15]) circle(d=hole_size, $fn=30);
+            translate([19.5, 15]) circle(d=hole_size, $fn=30);
             
             translate([-31, -15]) circle(d=hole_size, $fn=30);
-            translate([31, -15]) circle(d=hole_size, $fn=30);
+            translate([31.5, -15]) circle(d=hole_size, $fn=30);
             
             // Battery
             translate([0, 0]) minkowski()
@@ -98,10 +98,10 @@ difference()
             
             
             translate([-19, 15]) circle(d=hole_size, $fn=30);
-            translate([19, 15]) circle(d=hole_size, $fn=30);
+            translate([19.5, 15]) circle(d=hole_size, $fn=30);
             
             translate([-31, -15]) circle(d=hole_size, $fn=30);
-            translate([31, -15]) circle(d=hole_size, $fn=30);
+            translate([31.5, -15]) circle(d=hole_size, $fn=30);
             
             // Battery
             translate([0, 0]) minkowski()
@@ -114,15 +114,15 @@ difference()
             translate([-20, -10]) minkowski()
             {
                 square([5, 5], center=true);
-                circle(r=0.8, $fn=30);
+                circle(r=1.0, $fn=30);
             }
             
             //Speaker
-            translate([-28, 0]) circle(r=0.5, $fn=30);
-            translate([-30, 0]) circle(r=0.5, $fn=30);
-            translate([-26, 0]) circle(r=0.5, $fn=30);
-            translate([-28, 2]) circle(r=0.5, $fn=30);
-            translate([-28, -2]) circle(r=0.5, $fn=30);
+            translate([-28, 0]) circle(r=0.7, $fn=30);
+            translate([-30, 0]) circle(r=0.7, $fn=30);
+            translate([-26, 0]) circle(r=0.7, $fn=30);
+            translate([-28, 2]) circle(r=0.7, $fn=30);
+            translate([-28, -2]) circle(r=0.7, $fn=30);
         }
 
         color("green") difference()
@@ -139,11 +139,11 @@ difference()
                 cylinder(r=1.0, h=1.6, $fn=30);
             }
             
-            translate([-28, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
-            translate([-30, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
-            translate([-26, 0, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
-            translate([-28, 2, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
-            translate([-28, -2, -1.05]) cylinder(r=0.5, h=1.6, $fn=30);
+            translate([-28, 0, -1.05]) cylinder(r=0.7, h=1.6, $fn=30);
+            translate([-30, 0, -1.05]) cylinder(r=0.7, h=1.6, $fn=30);
+            translate([-26, 0, -1.05]) cylinder(r=0.7, h=1.6, $fn=30);
+            translate([-28, 2, -1.05]) cylinder(r=0.7, h=1.6, $fn=30);
+            translate([-28, -2, -1.05]) cylinder(r=0.7, h=1.6, $fn=30);
         }
     }
 
@@ -151,15 +151,15 @@ difference()
     color("blue") 
     minkowski()
     {
-        linear_extrude(height=1.8) spike();
+        linear_extrude(height=1.85) spike();
         cube(0.4);
     }
 
                 translate([-19, 15, 4.01]) rotate([0, 0, 30]) cylinder(d=4.9, h=3, $fn=6);
-                translate([19, 15, 4.01]) rotate([0, 0, 30]) cylinder(d=4.9, h=3, $fn=6);
+                translate([19.5, 15, 4.01]) rotate([0, 0, 30]) cylinder(d=4.9, h=3, $fn=6);
                 
                 translate([-31, -15, 4.01]) cylinder(d=4.9, h=3, $fn=6);
-                translate([31, -15, 4.01]) cylinder(d=4.9, h=3, $fn=6);
+                translate([31.5, -15, 4.01]) cylinder(d=4.9, h=3, $fn=6);
     
     
     //ISP
